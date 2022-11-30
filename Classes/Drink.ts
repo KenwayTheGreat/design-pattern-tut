@@ -1,13 +1,13 @@
-import MenuItem from "./MenuItem";
+import Product from "./Product";
 
-class Drink extends MenuItem {
-    constructor(name: string, quantity: number, price: number) {
-      super(name, quantity, price)
-    }
-  
-    getItem() {
-      super.getItem();
-    }
+class Drink extends Product {
+  constructor(name: string, quantity: number, price: number) {
+    super(name, quantity, price)
   }
 
-  export default Drink;
+  getItems() {
+    super.getItems();
+  }
+}
+
+export default Drink;

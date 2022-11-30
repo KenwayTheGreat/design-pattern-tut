@@ -1,19 +1,29 @@
+import Product from "./Product";
+interface Order {
+  paid: boolean;
+  orderNumber: number;
+  items: Product[];
+  getTotalPrice(): number;
+  orderInfo(): Promise<string>;
+}
 class Observable {
-  observers: any[];
+
+  
+  observers: Order[];
   constructor() {
     this.observers = [];
   }
 
-  subscribe(func: any) {
+  subscribe(func: Order) {
     this.observers.push(func);
   }
 
-  unsubscribe(func: any) {
+  unsubscribe(func: Order) {
     this.observers = this.observers.filter(observer => observer !== func);
   }
 
-  notify(data: any) {
-    this.observers.forEach(observer => observer(data));
+  notify(data: void) {
+    this.observers.forEach(() => console.log(data ,"Notified"));
   }
 }
-  export default Observable;
+export default Observable;

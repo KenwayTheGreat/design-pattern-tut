@@ -1,14 +1,14 @@
-import MenuItem from "./MenuItem";
+import Product from "./Product";
 
-class Potatoes extends MenuItem {
+class Potatoes extends Product {
     type: 'Fri' | 'Curly' | 'Croquettes';
 
     constructor(type: 'Fri' | 'Curly' | 'Croquettes', name: string, quantity: number, price: number) {
         super(name, quantity, price)
         this.type = type;
     }
-    getItem() {
-        super.getItem();
+    getItems() {
+        super.getItems();
         console.log(`Your Potato is ${this.type}`);
     }
 }

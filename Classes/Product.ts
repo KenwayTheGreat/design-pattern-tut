@@ -1,4 +1,4 @@
-abstract class MenuItem {
+abstract class Product {
   name: string;
   quantity: number;
   price: number;
@@ -7,8 +7,8 @@ abstract class MenuItem {
     this.quantity = quantity;
     this.price = price;
   }
-  getItem() {
+  getItems() {
     console.log(`Your have ordered ${this.name} x ${this.quantity} : ${this.price}$`);
   }
 }
-  export default MenuItem;
+export default Product;

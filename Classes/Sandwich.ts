@@ -1,16 +1,16 @@
-import MenuItem from "./MenuItem";
+import Product from "./Product";
 
-class Sandwich extends MenuItem {
-    size: 'Medium' | 'Large';
-  
-    constructor(size: 'Medium' | 'Large', name: string, quantity: number, price: number) {
-      super(name, quantity, price)
-      this.size = size;
-    }
-    getItem() {
-      super.getItem();
-      console.log(`Your size is ${this.size}`);
-    }
+class Sandwich extends Product {
+  size: 'Medium' | 'Large';
+
+  constructor(size: 'Medium' | 'Large', name: string, quantity: number, price: number) {
+    super(name, quantity, price)
+    this.size = size;
   }
-  
-  export default Sandwich;
+  getItems() {
+    super.getItems();
+    console.log(`Your size is ${this.size}`);
+  }
+}
+
+export default Sandwich;
