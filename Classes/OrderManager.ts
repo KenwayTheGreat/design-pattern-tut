@@ -13,9 +13,7 @@ class OrderManager {
     items,
     getTotalPrice(): number {
       let sum = 0;
-      items.forEach(item => {
-        sum += item.price
-      })
+      items.reduce((accumulator, item) => accumulator + item.price, sum)
       return sum;
     },
     orderInfo(): Promise<string> {
